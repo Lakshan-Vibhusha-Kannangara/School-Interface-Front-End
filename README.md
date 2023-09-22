@@ -39,12 +39,12 @@ Welcome to the Student Information System (SIS) software development project! In
 
 Back End API: The Web API will be built using Dotnet Core
  * 
-
-Database: I'm utilizing MySql as our database management system to store and manage student information efficiently. Our database design will incorporate best practices, including primary keys, foreign keys, and unique constraints, to ensure data integrity.
-      * I created Base entity(Student Table ,Teacher Table, Subject Table,Classroom Table) and 
+Database:
+ I'm utilizing MySql as our database management system to store and manage student information efficiently. Our database design will incorporate best practices, including primary keys, foreign keys, and unique constraints, to ensure data integrity.
+        * I created Base entity(Student Table ,Teacher Table, Subject Table,Classroom Table) and 
         * SubjectTeacher Table has a foreign key mapping to subject and teacher tables and subject and teacher columns union should be unique( 1 constraint)
-        *Did the same for AllocateSubject Table and AllocateClassroom Table.
-        *For usual request data fetching I used Entity Framework's ORM mapping to interact with the MySql DBMS and for StudentReport and other few requests I wrote a particular querry to fetch data (Inner Join)
+        * Did the same for AllocateSubject Table and AllocateClassroom Table.
+        * For usual request data fetching I used Entity Framework's ORM mapping to interact with the MySql DBMS and for StudentReport and other few requests I wrote a particular querry to fetch data (Inner Join)
         *
 
 # System Architecture 
