@@ -1,5 +1,6 @@
-School Information System - Software Development Project
-Introduction
+# School Information System - Software Development Project
+
+##Introduction
 Welcome to the Student Information System (SIS) software development project! In this endeavor, we aim to create a comprehensive and user-friendly Student Information System that leverages modern technologies for both the front end and back end. The key components of our system include:
 
 Front End: We will be using Angular, a popular web application framework, to develop an intuitive and interactive user interface. Angular will allow us to create a dynamic and responsive user experience.
