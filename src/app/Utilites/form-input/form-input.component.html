@@ -1,0 +1,18 @@
+
+  
+  
+<span *ngIf="required && control.invalid && control.touched">*required</span>
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">
+            <i [class]="icon"></i>
+        </span>
+    </div>
+    <input
+    [id]="label"
+    [formControl]="control"
+    [type]="type"
+    [placeholder]="placeholder"
+    class="form-control"
+  />
+</div>

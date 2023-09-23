@@ -1,0 +1,10 @@
+
+
+.row {
+  margin-bottom: 0px; /* You can adjust this value to control the space between rows */
+}
+
+/* You can also adjust the spacing inside the form inputs if needed */
+.app-form-input {
+  margin-bottom: 10px; /* Adjust this value to control the space between form inputs */
+}

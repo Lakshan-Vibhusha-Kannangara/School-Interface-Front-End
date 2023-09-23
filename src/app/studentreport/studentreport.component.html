@@ -1,0 +1,84 @@
+<section class="vh-120" style="background-color: #eee">
+  <div class="container h-120">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-12 col-lg-8 col-xl-7 order-2 order-lg-1">
+                <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Student Detail Report
+                </p>
+
+                <form [formGroup]="registerForm">
+                  <div class="mb-4">
+                    <app-custom-select
+                      [options]="registerForm.get('studentSelection')?.controls"
+                      (selectedOption)="onStudentSelect($event)"
+                      [defaultName]="'student'"
+                    ></app-custom-select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="contactPerson" class="form-label"
+                      >Contact Person</label
+                    >
+                    <h5 class="form-control" id="contactPerson">
+                      {{ student?.contactPerson }}
+                    </h5>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactNo" class="form-label"
+                      >Contact No.</label
+                    >
+                    <h5 class="form-control" id="contactNo">
+                      {{ student?.contactNo }}
+                    </h5>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <h5 class="form-control" id="email">
+                      {{ student?.emailAddress }}
+                    </h5>
+                  </div>
+                  <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <h5 class="form-control" id="dob">
+                      {{ student?.dateOfBirth }}
+                    </h5>
+                  </div>
+                  <div class="mt-4">
+                    <h4>Subject & Teacher List</h4>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Subject Name</th>
+                          <th>Teacher Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of student?.subjectTeacherPairs">
+                          <td>{{ item.subjectName }}</td>
+                          <td>{{ item.teacherName }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="col-md-12 col-lg-4 col-xl-5 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="assets/subject.svg"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

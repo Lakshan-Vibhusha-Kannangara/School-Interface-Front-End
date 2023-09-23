@@ -1,0 +1,16 @@
+.navbar-nav .nav-link {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+
+  .navbar-nav{
+    left: 4%;
+  }
+  h4{
+    margin: 4px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  nav-item{
+    margin: 20px;
+  }

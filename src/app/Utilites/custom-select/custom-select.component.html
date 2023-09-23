@@ -1,0 +1,4 @@
+<select class="form-select form-select-md" [(ngModel)]="selectedValue" (ngModelChange)="onOptionSelected()">
+  <option value=0>Select  {{defaultName}}</option>
+  <option *ngFor="let option of options; let i = index" [value]="option.value.id">{{ option.value.name }}</option>
+</select>
