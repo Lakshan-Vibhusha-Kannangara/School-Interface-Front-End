@@ -1,27 +1,46 @@
-# Application
+# School Information System-Web Api
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img width="1039" alt="Screenshot 2023-09-22 at 11 54 28" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/a6ab681a-f771-49fd-b1ff-8b50826bb0a6">
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/ea973a15-c318-4daa-95e3-536d096cf9ff
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+
+
+
+
+# ECS link For Angular Front-End-
+# ECS link For Dotnet Core Back-End-   
+# AWS RDB link -database-1.cl2nped3ffqw.ap-south-1.rds.amazonaws.com  ?? will change the username and password acess and share later
+# Docker File Link for Front-End - 
+# Docker File Link for Back-End API- https://hub.docker.com/repository/docker/vibhushak/dotnet/general
+# Front End Repo Link-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End.git
+# Backend API Repo Link-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-RegApi.git 
+# Database Repo Link-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Database.git 
+# 
+# Introduction
+
+Welcome to the Student Information System (SIS) software development project! In this endeavor, we aim to create a comprehensive and user-friendly Student Information System that leverages modern technologies for both the front end and back end. The key components of our system include:
+
+Front End: I'm using Angular framework to develop an intuitive and interactive user interface. A dynamic and responsive user experience.
+
+Back End: The Web API will be built using Dotnet Core
+
+Database: I'm utilizing MySql as our database management system to store and manage student information efficiently. Our database design will incorporate best practices, including primary keys, foreign keys, and unique constraints, to ensure data integrity.
+
+
+# System Architecture 
