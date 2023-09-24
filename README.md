@@ -28,8 +28,9 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 # Database is in accordance to First, Second and Third Normal Forms
 
 
+<img width="1550" alt="Screenshot 2023-09-25 at 00 53 27" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/36076418-de4a-4f62-b03d-b413e28e12c4">
 
-<img width="1106" alt="Screenshot 2023-09-25 at 00 22 03" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/f47cb32e-e01c-4724-a148-43f4136bc0fb">
+
 
 
 
