@@ -6,8 +6,11 @@
 
 
 
-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/e52a657d-f12f-467b-b68e-e57157ebedd5
 
+
+
+
+https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/138dbaab-0ae3-4b56-8dfa-6813a98196ec
 
 
 
