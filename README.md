@@ -2,7 +2,7 @@
 
 
 
-<img width="1039" alt="Screenshot 2023-09-22 at 11 54 28" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/a6ab681a-f771-49fd-b1ff-8b50826bb0a6">
+<img width="200" alt="Screenshot 2023-09-22 at 11 54 28" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/a6ab681a-f771-49fd-b1ff-8b50826bb0a6">
 
 
 
