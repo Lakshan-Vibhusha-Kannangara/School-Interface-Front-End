@@ -13,16 +13,14 @@ export class AppComponent {
   }
   title = 'application';
 
-  shouldShowNavbar(): boolean {
-    // Determine whether to show the navbar based on the current route
-    const currentRoute = this.activatedRoute.firstChild;
+  shouldShowNavbar(): boolean {    const currentRoute = this.activatedRoute.firstChild;
     if (currentRoute) {
       const routePath = currentRoute.routeConfig?.path;
-      // Add logic to conditionally show the navbar for specific routes
-      // For example, show it for all routes except '/login'
-      return routePath !== 'login';
+
+      return (routePath !== 'login' && routePath !== 'signup');
+
     }
-    return true; // Show the navbar by default
+    return true; 
   }
 }
 

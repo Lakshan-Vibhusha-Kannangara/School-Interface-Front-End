@@ -20,7 +20,7 @@ export class TeachersComponent {
   }
   onSubmit() {
     const formData = this.teachersForm.value;
-    console.log(formData);
+
     this.teacher = {
       firstName: formData.firstName,
       lastName: formData.lastName,

@@ -18,9 +18,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './Utilites/footer/footer.component'; // Import the interceptor
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AuthInterceptor } from './Utilites/auth-interceptor/AuthInterceptor'; 
 import { FormInputComponent } from './Utilites/form-input/form-input.component';
 import { CustomSelectComponent } from './Utilites/custom-select/custom-select.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 const routes: Routes = [
   { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'allocatesubject', component: AllocatesubjectComponent },
   { path: 'studentreport', component: StudentreportComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignUpComponent },
 ];
 
 @NgModule({
@@ -49,6 +51,7 @@ const routes: Routes = [
 
     FormInputComponent,
     CustomSelectComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +66,9 @@ const routes: Routes = [
     StateService,
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: NoopInterceptor, // Use the interceptor
+      useClass: AuthInterceptor,
       multi: true,
-    },
+    }
   ],
   bootstrap: [AppComponent],
 })

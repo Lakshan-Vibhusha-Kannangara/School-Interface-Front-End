@@ -3,6 +3,7 @@ export interface Classroom {
     classroomName: string;
   }
   export interface Student {
+    studentID?:number;
     firstName: string;
     lastName: string;
     contactPerson: string;
@@ -25,6 +26,22 @@ export interface Classroom {
     emailAddress: string;
   }
  
+
+export interface User {
+  id?: number;
+  fullName?: string;
+  emailId: string;
+  password: string;
+  designation?: string;
+  createdDate?: string;
+  token?: string;
+}
+
+export interface LoginResponse{
+  token:string;
+  user:User;
+}
+
   export interface AllocateSubject {
     teacherID: number;
     subjectID: number;

@@ -35,7 +35,6 @@ export class AllocateclassComponent implements OnInit {
     this.stateService
       .deAllocateClassroom(cls, this.selectedTeacher)
       .subscribe((response) => {
-        console.log('teacher', cls);
         const allocationArray = this.allocateForm.get('allocated') as FormArray;
 
         const indexToRemove = allocationArray.controls.findIndex(
@@ -57,8 +56,6 @@ export class AllocateclassComponent implements OnInit {
       })
       .subscribe(
         (response: AllocateClass) => {
-          console.log(response);
-
           const allocationArray = this.allocateForm.get(
             'allocated'
           ) as FormArray;
@@ -71,10 +68,6 @@ export class AllocateclassComponent implements OnInit {
         },
         (error) => {
           console.error('Error:', error);
-          console.log({
-            TeacherID: this.selectedTeacher,
-            ClassroomID: this.selectedClass,
-          });
         }
       );
   }
@@ -83,7 +76,7 @@ export class AllocateclassComponent implements OnInit {
     this.stateService.fetchTeachers().subscribe(
       (teachers: Teacher[]) => {
         const teacherArray = <FormArray>this.allocateForm.get('teachers');
-        console.log(teachers);
+
         teachers.forEach((teacher, index) => {
           const control = new FormControl({
             name: teacher.firstName + ' ' + teacher.lastName,
@@ -102,11 +95,9 @@ export class AllocateclassComponent implements OnInit {
   fetchClasses() {
     this.stateService.fetchClassrooms().subscribe(
       (classes: Classroom[]) => {
-        console.log(classes);
         const classesArray = <FormArray>this.allocateForm.get('classes');
 
         classes.forEach((classroom, index) => {
-          console.log(classroom);
           const control = new FormControl({
             name: classroom.classroomName,
             id: classroom.classroomID,

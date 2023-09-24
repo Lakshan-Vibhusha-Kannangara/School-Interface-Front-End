@@ -20,11 +20,9 @@ export class RegisterComponent implements OnInit {
   fetchClasses() {
     this.stateService.fetchClassrooms().subscribe(
       (classes: Classroom[]) => {
-        console.log(classes);
         const classroomArray = <FormArray>this.registerForm.get('classrooms');
 
         classes.forEach((classroom, index) => {
-          console.log(classroom);
           const control = new FormControl({
             name: classroom.classroomName,
             id: classroom.classroomID,
@@ -74,24 +72,19 @@ export class RegisterComponent implements OnInit {
     this.stateService.postStudent(this.student).subscribe(
       (response) => {
         // Handle success response
-        console.log(response);
+
         alert('Student has been successfully registered!');
-        // Clear the form after successful registration if needed
+
         this.registerForm.reset();
       },
       (error) => {
         // Handle error response
         console.error(error);
-        alert(
-          'Error occurred while registering the student. Please try again.'
-        );
+        alert();
       }
     );
   }
 
-  // Initialize selectedClassroom to null
-
-  // Update the event handler to handle null values
   onClassroomSelect(value: number) {
     this.selectedClassroom = value;
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { StateService } from '../Utilites/state-service/state-service';
-import { HttpClient } from '@angular/common/http';
+
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
@@ -22,18 +22,17 @@ interface Student {
 }
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers: [StateService],
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class SignUpComponent implements OnInit {
   @ViewChild('classroomSelect') classroomSelect: any;
 
   student: Student;
   classrooms: Classroom[] = [];
   selectedClass: number;
-  loginForm: FormGroup;
+  signUpForm: FormGroup;
 
   constructor(
     private stateService: StateService,
@@ -47,21 +46,29 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
+    this.signUpForm = this.formBuilder.group({
+      fullName: [null, Validators.required],
       emailId: [null, Validators.required],
       password: [null, Validators.required],
+      designation: [null, Validators.required],
     });
   }
 
   onSubmit() {
-    const formData = this.loginForm.value;
+    const formData = this.signUpForm.value;
 
     this.stateService
-      .postLogin({ emailId: formData.emailId, password: formData.password })
+      .postUser({
+        fullName: formData.fullName,
+        emailId: formData.emailId,
+        password: formData.password,
+        designation: formData.designation,
+      })
       .subscribe((response: LoginResponse) => {
         this.setAuthTokenInSessionCookie(response.token);
-
-        this.router.navigate(['/register']);
+        alert('sign up successful');
+        console.log(this.cookieService.get('authToken'));
+        this.router.navigate(['/login']);
       });
   }
 }

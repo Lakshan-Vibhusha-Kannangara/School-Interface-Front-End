@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
+import { environment } from '../env/env';
 import {
   Subject,
   Classroom,
@@ -13,6 +13,7 @@ import {
   ClassroomPost,
   Student,
   StudentDetailReport,
+  User,
 } from '../interfaces/interfaces';
 
 @Injectable()
@@ -20,87 +21,86 @@ export class StateService {
   constructor(private http: HttpClient) {}
 
   fetchClassrooms(): Observable<Classroom[]> {
-    return this.http
-      .get<Classroom[]>('https://localhost:5001/api/Classroom/GetClassrooms')
-      .pipe(
-        catchError((error) => {
-          console.error('Error fetching classrooms', error);
-          return throwError(error);
-        })
-      );
+    return this.http.get<Classroom[]>(
+      `${environment.apiUrl}/Classroom/GetClassrooms`
+    );
   }
 
   fetchTeachers(): Observable<Teacher[]> {
     return this.http.get<Teacher[]>(
-      'https://localhost:5001/api/Teacher/GetTeachers'
+      `${environment.apiUrl}/Teacher/GetTeachers`
     );
   }
 
   fetchStudents(): Observable<Student[]> {
     return this.http.get<Student[]>(
-      'https://localhost:5001/api/Student/GetStudent'
+      `${environment.apiUrl}/Student/GetStudents`
     );
   }
 
   fetchSubjects(): Observable<Subject[]> {
     return this.http.get<Subject[]>(
-      'https://localhost:5001/api/Subject/GetSubjects'
+      `${environment.apiUrl}/Subject/GetSubjects`
     );
   }
 
   fetchStudentReports(id: number): Observable<StudentDetailReport> {
     return this.http.get<StudentDetailReport>(
-      `https://localhost:5001/api/StudentDetailReport/GetStudentDetailReport/${id}`
+      `${environment.apiUrl}/StudentDetailReport/GetStudentDetailReport/${id}`
     );
   }
 
   postStudent(student: Student): Observable<any> {
-    return this.http.post(
-      'https://localhost:5001/api/Student/AddStudent',
-      student
-    );
+    return this.http.post(`${environment.apiUrl}/Student/AddStudent`, student);
   }
 
   postTeacher(teacher: Teacher): Observable<any> {
+    return this.http.post(`${environment.apiUrl}/Teacher/AddTeacher`, teacher);
+  }
+
+  postLogin(login: User): Observable<any> {
     return this.http.post(
-      'https://localhost:5001/api/Teacher/AddTeacher',
-      teacher
+      `${environment.apiUrl}/Login/PostLoginDetails`,
+      login
     );
   }
 
+  postUser(register: User): Observable<any> {
+    return this.http.post(`${environment.apiUrl}/Login/Register`, register);
+  }
+
   postSubject(subject: Subject): Observable<any> {
-    return this.http.post(
-      'https://localhost:5001/api/Subject/AddSubject',
-      subject
-    );
+    return this.http.post(`${environment.apiUrl}/Subject/AddSubject`, subject);
   }
 
   postClassroom(classroom: ClassroomPost): Observable<any> {
     return this.http.post(
-      'https://localhost:5001/api/Classroom/AddClassroom',
+      `${environment.apiUrl}/Classroom/AddClassroom`,
       classroom
     );
   }
 
   postAllocateSubject(allocation: AllocateSubject): Observable<any> {
     return this.http.post(
-      'https://localhost:5001/api/SubjectTeacher/AddSubjectTeacher',
+      `${environment.apiUrl}/SubjectTeacher/AddSubjectTeacher`,
       allocation
     );
   }
 
   postAllocateClass(allocation: AllocateClass): Observable<any> {
     return this.http.post(
-      'https://localhost:5001/api/AllocateClassroom',
+      `${environment.apiUrl}/AllocateClassroom`,
       allocation
     );
   }
+
   deAllocateSubject(subjectId: number, teacherId: number): Observable<any> {
-    const url = `https://localhost:5001/api/SubjectTeacher/DeleteBySubjectAndTeacher/${subjectId}/${teacherId}`;
+    const url = `${environment.apiUrl}/SubjectTeacher/DeleteBySubjectAndTeacher/${subjectId}/${teacherId}`;
     return this.http.delete(url);
   }
+
   deAllocateClassroom(classroomId: number, teacherId: number): Observable<any> {
-    const url = `https://localhost:5001/api/AllocateClassroom/DeleteByClassroomIDAndTeacherID/${classroomId}/${teacherId}`;
+    const url = `${environment.apiUrl}/AllocateClassroom/DeleteByClassroomIDAndTeacherID/${classroomId}/${teacherId}`;
     return this.http.delete(url);
   }
 }

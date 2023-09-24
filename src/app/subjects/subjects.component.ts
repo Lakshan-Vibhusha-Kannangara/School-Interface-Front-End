@@ -10,7 +10,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SubjectsComponent implements OnInit {
   onSubmit() {
     const formData = this.subjectForm.value;
-    console.log(formData);
 
     this.stateService
       .postSubject({ subjectName: formData.subjectName })
@@ -18,7 +17,6 @@ export class SubjectsComponent implements OnInit {
         (response) => {
           alert('Sent Successfully');
           this.subjectForm.reset();
-          console.log(response);
         },
         (error) => {
           alert('Subject Exists');

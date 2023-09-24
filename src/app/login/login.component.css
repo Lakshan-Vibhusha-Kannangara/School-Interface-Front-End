@@ -1,27 +1,16 @@
-.input-group-prepend.align-items-center {
-    display: flex;
-    align-items: center;
-    height: 40px; /* Adjust the height as needed */
-  }
-  
-  .input-group-prepend .input-group-text {
-    height: 100%; /* Set the height of the icon to match the parent container */
-  }
-  
-  .form-control {
-    height: 100%; /* Set the height of the input to match the parent container */
-  }
-  .row{
-    margin-top: 20px;
 
-  }
-.vh-100{
-    top: -3vh;
-    position: relative;
+
+.row {
+  margin-bottom: 0px; /* You can adjust this value to control the space between rows */
+}
+
+/* You can also adjust the spacing inside the form inputs if needed */
+.app-form-input {
+  margin-bottom: 10px; /* Adjust this value to control the space between form inputs */
 }
          
 .btn-grad {
-  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+  background-image: linear-gradient(to right, #4b6cb7 0%, #182848  51%, #4b6cb7  100%);
   margin: 10px;
   padding: 15px 45px;
   text-align: center;

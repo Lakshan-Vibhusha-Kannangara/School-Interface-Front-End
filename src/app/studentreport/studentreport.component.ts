@@ -1,9 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { StateService } from '../Utilites/state-service/state-service';
-import { HttpClient } from '@angular/common/http';
+
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { response } from 'express';
-import { Student,StudentRef,StudentDetailReport} from '../Utilites/interfaces/interfaces';
+
+import {
+  Student,
+  StudentRef,
+  StudentDetailReport,
+} from '../Utilites/interfaces/interfaces';
 @Component({
   selector: 'app-studentreport',
   templateUrl: './studentreport.component.html',
@@ -25,12 +29,15 @@ export class StudentreportComponent implements OnInit {
     this.stateService.fetchStudents().subscribe(
       (students: Student[]) => {
         this.students = students;
-        const studentArray = this.registerForm.get('studentSelection') as FormArray;
+        const studentArray = this.registerForm.get(
+          'studentSelection'
+        ) as FormArray;
 
         students.forEach((student, index) => {
           const control = new FormControl({
-            name: student.firstName+" "+student.lastName,
-            id: student.classroomID,
+            name: student.firstName + ' ' + student.lastName,
+            id: student.studentID,
+            selected: false,
           });
           studentArray.push(control);
         });
@@ -44,7 +51,7 @@ export class StudentreportComponent implements OnInit {
   addStudents(id: number) {
     this.stateService.fetchStudentReports(id).subscribe(
       (response: StudentDetailReport) => {
-        console.log(response);
+
 
         this.student = {
           contactPerson: response.contactPerson,

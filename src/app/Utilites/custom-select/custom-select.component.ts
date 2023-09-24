@@ -14,7 +14,7 @@ export class CustomSelectComponent<T> implements OnInit {
   selectedValue: number = 0;
 
   ngOnInit() {
-    // Set the initial selectedValue to the default option value
+
     if (this.options.length > 0) {
       this.selectedValue = this.options[0]['id'];
       this.onOptionSelected();

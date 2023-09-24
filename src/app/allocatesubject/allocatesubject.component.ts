@@ -60,12 +60,9 @@ export class AllocatesubjectComponent implements OnInit {
     this.selectedSubjectID = val;
   }
   deallocateSubject(subjectID: any) {
-    console.log(subjectID);
-
     this.stateService
       .deAllocateSubject(subjectID, this.selectedTeacherID)
       .subscribe((response) => {
-        console.log('response of deallocate::  ', response);
         const allocationArray = this.allocateForm.get('allocated') as FormArray;
 
         const indexToRemove = allocationArray.controls.findIndex(
@@ -105,7 +102,6 @@ export class AllocatesubjectComponent implements OnInit {
         const subjectsArray = <FormArray>this.allocateForm.get('subjects');
 
         subjects.forEach((subject, index) => {
-          console.log(subject.subjectID);
           const control = new FormControl({
             name: subject.subjectName,
             selected: 'false',

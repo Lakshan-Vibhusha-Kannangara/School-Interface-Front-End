@@ -19,7 +19,7 @@
                     <app-custom-select
                       [options]="allocateForm.get('teachers')?.controls"
                       (selectedOption)="onTeacherSelect($event)"
-                      [defaultName]="'teacher'"
+                      [defaultName]="'a Teacher'"
                     ></app-custom-select>
                   </div>
 
@@ -27,7 +27,7 @@
                     <app-custom-select
                       [options]="allocateForm.get('classes')?.controls"
                       (selectedOption)="onClassSelect($event)"
-                      [defaultName]="'class'"
+                      [defaultName]="'a Classroom'"
                     ></app-custom-select>
                   </div>
 
