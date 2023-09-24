@@ -25,7 +25,7 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 
 
 # Database Design
-Database is in accordance to First, Second and Third Normal Forms
+# Database is in accordance to First, Second and Third Normal Forms
 
 
 
