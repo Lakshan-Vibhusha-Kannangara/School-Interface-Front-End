@@ -6,17 +6,11 @@
 
 
 
-
-
-
-Uploading Demo Part I.mp4…
-
+https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/e52a657d-f12f-467b-b68e-e57157ebedd5
 
 
 
 
-
-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/aae926a5-233c-4a7b-97ea-0473a4772b27
 
 
 
