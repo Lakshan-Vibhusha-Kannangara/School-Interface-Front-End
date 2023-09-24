@@ -26,6 +26,10 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 
 # Database Design
 # Database is in accordance to First, Second and Third Normal Forms
+# Used an Inner Join to get data from Table relations >>>
+  from tc in _studentDbContext.AllocateClassroom
+  join ts in _studentDbContext.SubjectTeacher on tc.TeacherID equals ts.TeacherID
+  where tc.ClassroomID == student.ClassroomID
 
 
 <img width="1550" alt="Screenshot 2023-09-25 at 00 53 27" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/36076418-de4a-4f62-b03d-b413e28e12c4">
