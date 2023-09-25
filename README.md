@@ -1,4 +1,4 @@
-# School Information System-Web Api
+# School Information System-Front End
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/138dbaab-0ae3-4b56-8dfa-6813a98196ec
+https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/138dbaab-0ae3-4b56-8dfa-6813a98196ec.mp4
 
 
 
@@ -20,7 +20,7 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 
 
 
-https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/531651e4-77e6-42e9-81e3-1eab1ad8a79c
+https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/531651e4-77e6-42e9-81e3-1eab1ad8a79c.mp4
 
 
 
