@@ -36,7 +36,9 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
   from tc in _studentDbContext.AllocateClassroom
   join ts in _studentDbContext.SubjectTeacher on tc.TeacherID equals ts.TeacherID
   where tc.ClassroomID == student.ClassroomID
-<img width="1550" alt="Screenshot 2023-09-25 at 00 53 27" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/52b1ce97-707c-474a-b8d7-9ee042543aa2">
+  
+
+<img width="1106" alt="Screenshot 2023-09-25 at 00 22 03" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/b24c6ae2-cdf9-454b-9b05-3b04f28018ca">
 
 
 
