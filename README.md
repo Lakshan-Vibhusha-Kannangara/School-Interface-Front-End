@@ -3,7 +3,7 @@
 
 
 
-<img width="200" alt="Screenshot 2023-09-22 at 11 54 28" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/aad36698-82a9-4c02-8ff1-373a418f6170">
+<img width="300" alt="Screenshot 2023-09-22 at 11 54 28" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/aad36698-82a9-4c02-8ff1-373a418f6170">
 
 
 
@@ -41,6 +41,7 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 <img width="1550" alt="Screenshot 2023-09-25 at 00 53 27" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/36076418-de4a-4f62-b03d-b413e28e12c4">
 
 
+<img width="533" alt="Screenshot 2023-09-25 at 09 20 27" src="https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets/77208138/6a37fefb-accd-4257-94a1-fa4f7e352907">
 
 
 
