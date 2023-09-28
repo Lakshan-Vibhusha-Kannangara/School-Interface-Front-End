@@ -48,7 +48,7 @@ https://github.com/Lakshan-Vibhusha-Kannangara/School-Interface-Front-End/assets
 
 
 
-
+# Live Link for the application ->> http://65.0.54.74
 
 # ECS link For Angular Front-End-
 # ECS link For Dotnet Core Back-End-   
